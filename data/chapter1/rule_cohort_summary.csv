@@ -1,0 +1,4 @@
+﻿cohort,name,n,min_union_n,frequent_itemset_derived_rules,all_pass_n,failed_n,confidence_failed_n,lift_failed_n
+discovery,发现集,32629,164,312,34,278,278,154
+confirmation,核验集,13984,70,312,33,279,279,148
+full,全量,46613,234,314,34,280,280,154

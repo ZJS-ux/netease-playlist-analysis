@@ -1,0 +1,10 @@
+﻿model,threshold,selection
+多数类基线,0.5,fixed default
+逻辑回归,0.27136014189023827,validation F1
+决策树,0.22983870967741934,validation F1
+随机森林,0.26117334115956164,validation F1
+GBM,0.26406017690312833,validation F1
+线性SVM,-0.4321840136549667,validation F1
+RBF-SVM,-0.8669766440728592,validation F1
+MLP,0.30118562782942454,validation F1
+PCA＋MLP,0.30954226249617445,validation F1

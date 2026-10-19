@@ -1,0 +1,4 @@
+﻿scope,document_n,word_cells_capped,token_occurrences_before,token_occurrences_after
+train,27686,5394,485839,471202
+validation,8965,1947,164844,159575
+test,8599,1824,157771,152784

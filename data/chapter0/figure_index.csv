@@ -1,0 +1,14 @@
+﻿figure_stem,supporting_csv_stems,source,transformation
+01_quality,01_quality;sample_scopes,历史主表,异常计数与零值
+02_distributions,02_distributions;descriptive_statistics,历史主表,原始与ln(1+x)，40分箱
+03_boxplots,03_boxplots,历史主表,ln(1+x)上计算1.5×IQR
+04_quantiles,04_quantiles,历史主表,线性插值，标注原数值
+05_concentration,05_head_share;05_concentration_curve,历史主表,按各指标分别降序累计
+06_creation_year,06_creation_year,历史主表,创建年份计数
+07_tags,07_tag_frequency;07_tag_count,历史主表,空白归一，多选计数
+08_text_length,08_text_length,历史主表,有效文本字符数，ln(1+x)
+09_ratio,09_ratio_histogram;09_ratio_ecdf;09_ratio_sensitivity,历史主表,有效严格比值，缺失不作0
+10_relations,10_historical_relation_coverage;10_fresh_relation_coverage,历史与新采分别,唯一歌曲ID数量核验
+11_secondary,11_secondary,635条独立补充,2024-05-28快照，年龄按天
+12_comment_coverage,12_comment_year_role;12_comment_coverage,新采去重评论,按发表年和角色；按歌单覆盖
+13_teaching_example,13_fictional_example,完全虚构,原始尺度均值、中位数、箱线图

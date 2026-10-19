@@ -1,0 +1,17 @@
+﻿model,validation_ap,fit_seconds,parameters
+多数类基线,0.23906895801609745,0.005749600000854116,DummyClassifier()
+逻辑回归,0.4827297806651353,0.16158069999801228,"LogisticRegression(C=1, max_iter=1500, random_state=20261018)"
+决策树,0.40913513898947584,4.398352599997452,"DecisionTreeClassifier(max_depth=10, min_samples_leaf=30, random_state=20261018)"
+随机森林,0.49269471733332637,25.46428079999896,"RandomForestClassifier(max_depth=14, min_samples_leaf=5, n_estimators=150,
+                       n_jobs=2, random_state=20261018)"
+GBM,0.47987975465108645,95.32036990000051,"GradientBoostingClassifier(learning_rate=0.05, max_depth=2, min_samples_leaf=20,
+                           random_state=20261018)"
+线性SVM,0.48124902037471473,1.1543931000014709,"LinearSVC(C=0.1, max_iter=5000, random_state=20261018)"
+RBF-SVM,0.4955406640357089,170.10459179999816,"SVC(C=1, cache_size=512, random_state=20261018)"
+MLP,0.4998055949605259,2.7134021000019857,"MLPClassifier(alpha=0.01, early_stopping=True, hidden_layer_sizes=(64, 32),
+              max_iter=250, n_iter_no_change=15, random_state=20261018)"
+PCA＋MLP,0.4911176132947933,3.4558053000000655,"Pipeline(steps=[('pca', PCA(n_components=0.95, svd_solver='full')),
+                ('mlpclassifier',
+                 MLPClassifier(alpha=0.01, early_stopping=True,
+                               hidden_layer_sizes=(64, 32), max_iter=250,
+                               n_iter_no_change=15, random_state=20261018))])"

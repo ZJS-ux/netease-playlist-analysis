@@ -1,0 +1,4 @@
+﻿scope,n,zero_known_word_n
+train,27686,172
+validation,8965,66
+test,8599,58

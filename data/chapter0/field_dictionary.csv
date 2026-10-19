@@ -1,0 +1,30 @@
+﻿field,含义,单位或类型,使用规则
+playlist_id,歌单主键,整数标识,一行对应一个歌单快照；跨表用此字段关联，不拿名称当主键
+name,歌单标题,文本,空白视为缺失；不同 ID 同名保留
+tags,标签列表,文本列表,保留列表，统一空白并去掉单歌单内重复标签
+n_tags,标签数,个,从清洗后 tags 重新计算，并保留原数值核对
+confidence,来源特定类别,normal/vip/official,沿用来源编码，不解释为模型概率；新采无法复原，保持缺失
+play_count,累计播放量,次,非用户数；保留零值；无效计数置缺失
+subscribed_count,收藏计数,次,快照指标；不能与播放量组成真实用户收藏概率
+share_count,分享计数,次,与播放量分别检查有效样本
+comment_count,平台评论计数,条,与实际采到的评论文本行数不同；负数置缺失
+create_time,歌单创建时间,日期/时间,历史表只有日期精度；不是采集时间
+description,歌单简介,文本,空值、纯空白统一缺失；文本分析单独筛样本
+creator_nickname,创建者昵称,文本,不保证唯一，不能代替用户 ID；报告预览省略该字段
+creator_user_type,来源的用户类型编码,分类编码,保留，不凭编码自行猜身份
+creator_gender,来源性别编码,0/1/2,0 未知、1 男、2 女；不作为本章结论依据
+*_raw / *_invalid,原值与无效标记,原类型/布尔,保留追溯信息；只把无效字段置缺失
+name_missing / description_missing,文本缺失标记,布尔,空白并入缺失；缺失长度不是零
+name_length / description_length,去首尾空白后的长度,字符,含标点与内部空白；未分词
+log1p_*,对数计数,ln(1+x),自然对数，0 变成 0；展示跨度并保留排序
+creation_year,创建年份,年,仅描述本样本的创建结构
+favorite_play_ratio_raw,可计算收藏/播放比,比值,播放>0、计数有效；保留>1以供核查
+ratio_eligible / favorite_play_ratio,严格比值口径,布尔/比值,进一步要求收藏≤播放；不删主表记录
+recorded_song_count,关系表记录的唯一歌曲数,首,由关系表汇总；历史样本不等于实际曲目总数
+track_count,实际歌曲总数,首,仅635条补充表和新采表提供；不同来源分开使用
+age_days_at_capture,采集时歌单年龄,天,仅635条按2024-05-28减创建日期计算；历史主表不算年龄
+captured_at,新采观察时间,带时区时间,2026-10-16；必须与创建时间、评论发表时间区分
+comment_id / comment_time,评论主键与发表时间,整数/时间,以 playlist_id+comment_id 去重；时间不是采集日
+author_role,评论作者角色,other/unknown/creator,明确非创建者、未知、创建者分开；未知不补成非创建者
+comment_sources / observed_batches,评论来源及批次,文本,重复观察合并但来源保留；热门和普通评论采样不同
+track_ids_complete,返回歌曲 ID 数量核验,布尔,与接口 track_count 数量匹配；不表示全部歌曲详情齐全
