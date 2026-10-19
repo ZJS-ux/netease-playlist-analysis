@@ -4,6 +4,8 @@ Python 数据分析案例与离线交互展示。围绕七个问题，分析标�
 
 ## 查看作品
 
+- **在线查看**：[完整展示](https://zjs-ux.github.io/netease-playlist-analysis/) · [案例阅读](https://zjs-ux.github.io/netease-playlist-analysis/case-study.html)。
+
 - **完整展示**：[打开展示页](index.html)。启用 GitHub Pages 后可直接在线查看。
 - **分析案例**：[阅读页面](case-study.html) · [GitHub 文字版](case-study.md)。
 - **来源说明**：[数据与参考资料](DATA_SOURCES.md)。
